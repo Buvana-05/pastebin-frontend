@@ -4,12 +4,12 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({ providedIn: 'root' })
 export class PasteService {
 
-  private apiUrl = 'http://localhost:8080/api/pastes';
+  private apiUrl = 'https://pastebin-backend-kwjl.onrender.com/api/pastes';
 
   constructor(private http: HttpClient) {}
 
   createPaste(content: string, ttl?: number, maxViews?: number) {
-    return this.http.post<any>('http://localhost:8080/api/pastes', {
+    return this.http.post<any>('https://pastebin-backend-kwjl.onrender.com/api/pastes', {
       content: content,
       ttl: ttl,
       maxViews: maxViews
