@@ -1,0 +1,30 @@
+<h2>Create Paste</h2>
+
+<textarea id="content" 
+   [(ngModel)]="content" 
+   name="content" 
+   rows="10" 
+   cols="50"></textarea><br>
+
+<br /><br />
+
+<input
+  type="number"
+  [(ngModel)]="ttl"
+  placeholder="TTL (minutes, optional)" />
+
+<br /><br />
+
+<input
+  type="number"
+  [(ngModel)]="maxViews"
+  placeholder="Max views (optional)" />
+
+<br /><br />
+
+<button type="button" (click)="createPaste()">Create Paste</button>
+
+<div *ngIf="shareUrl">
+  <p>Your paste URL:</p>
+  <a [href]="shareUrl">{{ shareUrl }}</a>
+</div>

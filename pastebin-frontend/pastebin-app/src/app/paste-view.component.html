@@ -1,0 +1,10 @@
+
+
+<ng-container *ngIf="paste$ | async as paste; else loading"> 
+  <h3>Pasted Content:</h3> 
+  <pre>{{ paste.content }}</pre> 
+</ng-container>
+
+<ng-template #loading>
+   <p>Loading paste...</p> 
+  </ng-template>
